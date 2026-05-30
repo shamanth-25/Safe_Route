@@ -1,0 +1,1811 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-05-30T04:44:22Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/635428041",
+        "layer": "1",
+        "name": "HITEC City",
+        "network": "Hyderabad Metro",
+        "network:wikidata": "Q646209",
+        "public_transport": "station",
+        "railway": "station",
+        "source": "survey",
+        "station": "subway",
+        "subway": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3832321,
+          17.4489667
+        ]
+      },
+      "id": "way/635428041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118754593",
+        "construction": "station",
+        "disused": "yes",
+        "name": "Jungametta (u/c)",
+        "name:te": "జంగంమేట",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4683887,
+          17.3353179
+        ]
+      },
+      "id": "node/1118754593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118754600",
+        "construction": "station",
+        "disused": "yes",
+        "name": "Charminar (u/c)",
+        "name:te": "చార్మినార్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4799909,
+          17.3619252
+        ]
+      },
+      "id": "node/1118754600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118754617",
+        "construction": "station",
+        "disused:railway": "station",
+        "name": "Shamserganj (u/c)",
+        "name:te": "షంషేర్గంజ్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4683869,
+          17.3408101
+        ]
+      },
+      "id": "node/1118754617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118754623",
+        "addr:city": "Hyderabad",
+        "addr:district": "Hyderabad",
+        "addr:postcode": "500065",
+        "addr:street": "Shah Ali Banda",
+        "construction": "station",
+        "disused:railway": "station",
+        "name": "Shah Ali Banda (u/c)",
+        "name:te": "షా అలీ బండా",
+        "name:ur": "شاہ علی بندہ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4723504,
+          17.3507744
+        ]
+      },
+      "id": "node/1118754623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118754666",
+        "construction": "station",
+        "disused": "yes",
+        "name": "Falaknuma Terminal (u/c)",
+        "name:te": "ఫలక్నుమా టెర్మినల్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4699981,
+          17.3317141
+        ]
+      },
+      "id": "node/1118754666"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1118754671",
+        "construction": "station",
+        "disused": "yes",
+        "name": "Salar Jung Museum (u/c)",
+        "name:te": "సాలార్ జంగ్ మ్యూజియం",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4822609,
+          17.3717823
+        ]
+      },
+      "id": "node/1118754671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2422172970",
+        "name": "Begumpet",
+        "name:fa": "بیگم پیت",
+        "name:ml": "ബേഗംപേട്ട്",
+        "name:te": "బేగంపేట్",
+        "name:ur": "بیگم پیٹ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4569341,
+          17.4375661
+        ]
+      },
+      "id": "node/2422172970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6444553238",
+        "name": "S. R. Nagar",
+        "name:fa": "اس آر نگر",
+        "name:ml": "എസ് ആർ നഗർ",
+        "name:te": "ఎస్.ఆర్. నగర్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q83175963"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4416081,
+          17.4417071
+        ]
+      },
+      "id": "node/6444553238"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6444553239",
+        "name": "HITEC City",
+        "name:fa": "شهر هایتک",
+        "name:ml": "ഹൈടെക് സിറ്റി",
+        "name:te": "హైటెక్ సిటి",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q56701859"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3831376,
+          17.4490055
+        ]
+      },
+      "id": "node/6444553239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6447168562",
+        "layer": "1",
+        "name": "Nagole",
+        "name:fa": "ناگول",
+        "name:ml": "നാഗോൽ",
+        "name:te": "నాగోల్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q83377016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5588222,
+          17.3907683
+        ]
+      },
+      "id": "node/6447168562"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6447191882",
+        "name": "Ameerpet (Red Line)",
+        "name:fa": "امیرپیت (خط قرمز)",
+        "name:ml": "അമീർപേട്ട്",
+        "name:te": "అమీర్‌పేట్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q56701862",
+        "wikipedia": "en:Ameerpet metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4447933,
+          17.4357214
+        ]
+      },
+      "id": "node/6447191882"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6451675812",
+        "internet_access": "no",
+        "name": "Durgam Cheruvu",
+        "name:fa": "درگام چروو",
+        "name:ml": "ദുർഗ്ഗം ചെരുവ്",
+        "name:te": "దుర్గం చెరువు",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "Metro",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q83554384"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3875721,
+          17.4429466
+        ]
+      },
+      "id": "node/6451675812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6672440858",
+        "name": "Yusufguda",
+        "name:fa": "یوسف گودا",
+        "name:ml": "യൂസുഫ്ഗുഡ",
+        "name:te": "యూసుఫ్‌గూడ",
+        "name:ur": "یوسف گوڑہ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q85518572"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4273216,
+          17.4351132
+        ]
+      },
+      "id": "node/6672440858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6700511122",
+        "name": "Ameerpet (Blue Line)",
+        "name:fa": "امیرپیت (خط آبی)",
+        "name:ml": "അമീർപേട്ട്",
+        "name:te": "అమీర్‌పేట్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q56701862",
+        "wikipedia": "en:Ameerpet metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4447834,
+          17.4352864
+        ]
+      },
+      "id": "node/6700511122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6777782858",
+        "layer": "1",
+        "lit": "yes",
+        "name": "Jubilee Hills Checkpost",
+        "name:fa": "ایست بازرسی جوبیلی هیلز",
+        "name:ml": "ജൂബിലി ഹിൽസ് ചെക്ക്പോസ്റ്റ്",
+        "name:te": "జూబ్లీ హిల్స్ చెక్‌పోస్ట్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "shelter": "yes",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q64038090"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4137145,
+          17.4281969
+        ]
+      },
+      "id": "node/6777782858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7040366286",
+        "internet_access": "no",
+        "name": "Kukatpally",
+        "name:fa": "کوکتپالی",
+        "name:ml": "കുക്കട്ട്പള്ളി",
+        "name:te": "కూక్కట్‌పల్లి",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q83283577"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.411638,
+          17.4850883
+        ]
+      },
+      "id": "node/7040366286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069749",
+        "name": "Uppal",
+        "name:fa": "اپل",
+        "name:ml": "ഉപ്പൽ",
+        "name:te": "ఉప్పల్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "OPL",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q83407689",
+        "wikipedia": "en:Uppal metro station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5601591,
+          17.3999384
+        ]
+      },
+      "id": "node/7052069749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069752",
+        "name": "Stadium",
+        "name:fa": "ورزشگاه",
+        "name:ml": "സ്റ്റേഡിയം",
+        "name:te": "స్టేడియం",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5542531,
+          17.4074002
+        ]
+      },
+      "id": "node/7052069752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069753",
+        "name": "NGRI",
+        "name:fa": "ان‌جی‌آر‌آی",
+        "name:te": "ఎన్.జి.ఆర్.ఐ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q83491622"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5463345,
+          17.4148264
+        ]
+      },
+      "id": "node/7052069753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069754",
+        "name": "Habsiguda",
+        "name:fa": "هابسیگودا",
+        "name:ml": "ഹബ്സിഗുഡ",
+        "name:te": "హబ్సీగూడ",
+        "name:ur": "حبشی گوڑہ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q58814861"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.540548,
+          17.42018
+        ]
+      },
+      "id": "node/7052069754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069755",
+        "name": "Tarnaka",
+        "name:fa": "تارناکا",
+        "name:ml": "തർണാക",
+        "name:te": "తార్నాక",
+        "name:ur": "تارناکا",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q56701857"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5284415,
+          17.4282965
+        ]
+      },
+      "id": "node/7052069755"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069756",
+        "name": "Mettuguda",
+        "name:fa": "متوگودا",
+        "name:ml": "മേട്ടുഗുഡ",
+        "name:te": "మెట్టుగూడ",
+        "name:ur": "میٹو گوڑہ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5195754,
+          17.4355207
+        ]
+      },
+      "id": "node/7052069756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069757",
+        "name": "Secunderabad East",
+        "name:fa": "سکندرآباد شرقی",
+        "name:ml": "സെക്കന്ദ്രാബാദ് ഈസ്റ്റ്",
+        "name:te": "సికింద్రాబాద్ ఈస్ట్",
+        "name:ur": "سکندر آباد ایسٹ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q58814860"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5054623,
+          17.4357184
+        ]
+      },
+      "id": "node/7052069757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069758",
+        "name": "Parade Grounds (Blue Line)",
+        "name:fa": "میدان رژه (خط آبی)",
+        "name:ml": "പരേഡ് ഗ്രൗണ്ട്സ്",
+        "name:te": "పెరేడ్ గ్రౌండ్స్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4974687,
+          17.4431943
+        ]
+      },
+      "id": "node/7052069758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069759",
+        "name": "Paradise",
+        "name:fa": "پارادایس",
+        "name:ml": "പാരഡൈസ്",
+        "name:te": "ప్యారడైజ్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4862436,
+          17.4434668
+        ]
+      },
+      "id": "node/7052069759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069766",
+        "name": "Prakash Nagar",
+        "name:fa": "پرکاش نگر",
+        "name:ml": "പ്രകാശ് നഗർ",
+        "name:te": "ప్రకాశ్‌నగర్",
+        "name:ur": "پرکاش نگر",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q84499965"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4658749,
+          17.4448889
+        ]
+      },
+      "id": "node/7052069766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069770",
+        "alt_name": "Taruni Madhura Nagar",
+        "name": "Madhura Nagar",
+        "name:fa": "مدهورا نگر",
+        "name:ml": "മധുര നഗർ",
+        "name:te": "మధుర నగర్",
+        "name:ur": "مدھورا نگر",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q63250572"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4390993,
+          17.4369652
+        ]
+      },
+      "id": "node/7052069770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069772",
+        "name": "Road No 5 Jubilee Hills",
+        "name:fa": "جاده شماره ۵ جوبیلی هیلز",
+        "name:ml": "റോഡ് നമ്പർ 5 ജൂബിലി ഹിൽസ്",
+        "name:te": "రోడ్ నం 5 జూబిలీ హిల్స్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q108874431"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4232069,
+          17.4300489
+        ]
+      },
+      "id": "node/7052069772"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069774",
+        "name": "Peddamma Gudi",
+        "name:fa": "پداما گودی",
+        "name:ml": "പെദ്ദമ്മ ഗുഡി",
+        "name:te": "పెద్దమ్మ గుడి",
+        "name:ur": "پیدما گڈی",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q84028775"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4083721,
+          17.4306512
+        ]
+      },
+      "id": "node/7052069774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7052069775",
+        "name": "Raidurg",
+        "name:fa": "رایدورگ",
+        "name:ml": "റായ്ദുർഗ്",
+        "name:te": "రాయదుర్గ్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q58814837"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3771819,
+          17.44218
+        ]
+      },
+      "id": "node/7052069775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7195061310",
+        "name": "Parade Grounds (Green Line)",
+        "name:fa": "میدان رژه (خط سبز)",
+        "name:ml": "പരേഡ് ഗ്രൗണ്ട്സ്",
+        "name:te": "పెరేడ్ గ్రౌండ్స్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.497584,
+          17.4444775
+        ]
+      },
+      "id": "node/7195061310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7201054971",
+        "alt_name": "Jubilee Bus Station",
+        "name": "JBS",
+        "name:fa": "جی بی اس",
+        "name:ml": "ജെബിഎസ്",
+        "name:te": "జె బి ఎస్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4964843,
+          17.4488181
+        ]
+      },
+      "id": "node/7201054971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7206794919",
+        "name": "RTC Cross Roads",
+        "name:fa": "آر. تی. سی. کراس رودز",
+        "name:ml": "ആർ ടി സി ക്രോസ് റോഡ്സ്",
+        "name:te": "ఆర్ టీ సి క్రాస్ రోడ్స్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q108874753"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4968023,
+          17.4070321
+        ]
+      },
+      "id": "node/7206794919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7208768626",
+        "alt_name": "M. G. Bus Station (Red Line)",
+        "name": "Mahatma Gandhi Bus Station (Red Line)",
+        "name:fa": "ایستگاه اتوبوس مهاتما گاندی (خط قرمز)",
+        "name:ml": "മഹാത്മാഗാന്ധി ബസ് സ്റ്റേഷൻ",
+        "name:te": "ఎం.జి. బస్. స్టేషన్",
+        "name:ur": "مہاتما گاندھی بس اسٹیشن (ریڈ لائن)",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4862022,
+          17.3798572
+        ]
+      },
+      "id": "node/7208768626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7208768627",
+        "alt_name": "M. G. Bus Station (Green Line)",
+        "name": "Mahatma Gandhi Bus Station (Green Line)",
+        "name:fa": "ایستگاه اتوبوس مهاتما گاندی (خط سبز)",
+        "name:ml": "മഹാത്മാഗാന്ധി ബസ് സ്റ്റേഷൻ",
+        "name:te": "ఎం.జి. బస్. స్టేషన్",
+        "name:ur": "مہاتما گاندھی بس اسٹیشن (گرین لائن",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4858635,
+          17.3796948
+        ]
+      },
+      "id": "node/7208768627"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7208768628",
+        "addr:city": "Hyderabad",
+        "addr:city:ar": "حيدر آباد",
+        "addr:city:ur": "حیدرآباد",
+        "addr:place": "Malakpet",
+        "addr:place:ar": "مالك بيت",
+        "addr:place:ur": "مالک پیٹ",
+        "alt_name:ur": "ملک پیٹ",
+        "name": "Malakpet",
+        "name:ar": "مالك بيت",
+        "name:fa": "ملک پیت",
+        "name:ml": "മലക്പേട്ട്",
+        "name:te": "మలక్‌పేట్",
+        "name:ur": "مالک پیٹ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4939356,
+          17.3771888
+        ]
+      },
+      "id": "node/7208768628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7246815452",
+        "name": "Musarambagh",
+        "name:fa": "موسی رام باغ",
+        "name:te": "మూసరంబాఘ్",
+        "name:ur": "موسیٰ رام باغ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q81640785"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5119483,
+          17.3710728
+        ]
+      },
+      "id": "node/7246815452"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7358663499",
+        "name": "Sultan Bazar",
+        "name:fa": "سلطان بازار",
+        "name:ml": "സുൽത്താൻ ബസാർ",
+        "name:te": "సుల్తాన్ బజార్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4840241,
+          17.3844473
+        ]
+      },
+      "id": "node/7358663499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7358663501",
+        "name": "Narayanaguda",
+        "name:fa": "نارایاناگودا",
+        "name:ml": "നാരായണഗുഡ",
+        "name:te": "నారాయణగూడ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q108874763"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4899578,
+          17.3943658
+        ]
+      },
+      "id": "node/7358663501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7358663502",
+        "name": "Chikkadpally",
+        "name:fa": "چیکادپالی",
+        "name:ml": "ചിക്കടപ്പള്ളി",
+        "name:te": "చిక్కడపల్లి",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q108874757"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4948964,
+          17.4003634
+        ]
+      },
+      "id": "node/7358663502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7358663503",
+        "name": "Musheerabad",
+        "name:fa": "مشیرآباد",
+        "name:ml": "മുഷീറാബാദ്",
+        "name:te": "ముషీరాబాద్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q84890478"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4995051,
+          17.4178744
+        ]
+      },
+      "id": "node/7358663503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7358663506",
+        "name": "Gandhi Hospital",
+        "name:fa": "بیمارستان گاندی",
+        "name:ml": "ഗാന്ധി ഹോസ്പിറ്റൽ",
+        "name:te": "గాంధీ హాస్పిటల్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q84766563"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.501956,
+          17.4255155
+        ]
+      },
+      "id": "node/7358663506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7358663518",
+        "name": "Secunderabad West",
+        "name:fa": "سکندرآباد غربی",
+        "name:ml": "സെക്കന്ദ്രാബാദ് വെസ്റ്റ്",
+        "name:te": "సికింద్రాబాద్ వెస్ట్",
+        "name:ur": "سکندر آباد ویسٹ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q108874730"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4995181,
+          17.4338034
+        ]
+      },
+      "id": "node/7358663518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9144573053",
+        "layer": "1",
+        "lit": "yes",
+        "name": "Madhapur",
+        "name:fa": "مادهاپور",
+        "name:ml": "മാധാപൂർ",
+        "name:te": "మాధాపూర్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "shelter": "yes",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q83637027"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4004257,
+          17.4372637
+        ]
+      },
+      "id": "node/9144573053"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10279821749",
+        "alt_name": "محبوب گنج",
+        "name": "New Market",
+        "name:fa": "بازار جدید",
+        "name:ml": "ന്യൂമാർക്കറ്റ്",
+        "name:te": "కొత్త మార్కెట్",
+        "name:ur": "نئی مارکیٹ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q81483949"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5031775,
+          17.3734268
+        ]
+      },
+      "id": "node/10279821749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11737669094",
+        "name": "JNTU College",
+        "name:fa": "جی.ان.تی.یو کالج",
+        "name:ml": "ജെ എൻ ടി യു കോളേജ്",
+        "name:te": "జె.ఎన్.టి.యూ కాలేజి",
+        "network": "Hyderabad Metro",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q84250421"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3888661,
+          17.4986555
+        ]
+      },
+      "id": "node/11737669094"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11737669096",
+        "name": "KPHB Colony",
+        "name:fa": "مستعمره کی پی اچ بی",
+        "name:ml": "കെ പി എച്ച് ബി കോളനി",
+        "name:te": "కె.పి.హెచ్.బి కాలనీ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q85773083"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4017651,
+          17.4938025
+        ]
+      },
+      "id": "node/11737669096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11737669097",
+        "name": "Miyapur",
+        "name:fa": "میاپور",
+        "name:ml": "മിയാപൂർ",
+        "name:te": "మియాపూర్",
+        "network": "Hyderabad Metro",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q58814840"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3730252,
+          17.4965392
+        ]
+      },
+      "id": "node/11737669097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11737669098",
+        "name": "Victoria Memorial",
+        "name:fa": "یادبود ویکتوریا",
+        "name:ml": "വിക്ടോറിയ മെമ്മോറിയൽ",
+        "name:te": "విక్టోరియా మెమోరియల్",
+        "name:ur": "وکٹوریہ میومریل",
+        "network": "Hyderabad Metro",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q58814872"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5439302,
+          17.3618537
+        ]
+      },
+      "id": "node/11737669098"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11737669099",
+        "name": "Dilsukh Nagar",
+        "name:fa": "دلسوخ نگر",
+        "name:ml": "ദിൽസുഖ്നഗർ",
+        "name:te": "దిల్‌సుఖ్‌నగర్",
+        "name:ur": "دِل سُکھ نگر",
+        "network": "Hyderabad Metro",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q81724990"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5257172,
+          17.3685518
+        ]
+      },
+      "id": "node/11737669099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11737669100",
+        "name": "L. B. Nagar Metro Station",
+        "name:fa": "ال بی نگر",
+        "name:ml": "എൽ ബി നഗർ",
+        "name:te": "ఎల్.బి. నగర్",
+        "network": "Hyderabad Metro",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q58814838"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5479138,
+          17.3498286
+        ]
+      },
+      "id": "node/11737669100"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179187",
+        "alt_name": "OMC",
+        "internet_access": "no",
+        "name": "Osmania Medical College",
+        "name:fa": "کالج پزشکی عثمانیه",
+        "name:ml": "ഉസ്മാനിയ മെഡിക്കൽ കോളേജ്",
+        "name:te": "ఉస్మానియా వైద్య కళాశాల",
+        "name:ur": "عثمانیہ میڈیکل کالج",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q83859784"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4811327,
+          17.3823471
+        ]
+      },
+      "id": "node/11738179187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179188",
+        "internet_access": "no",
+        "name": "Nampally",
+        "name:fa": "نامپالی",
+        "name:ml": "നാമ്പള്ളി",
+        "name:te": "నాంపల్లి",
+        "name:ur": "نامپلّی",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q63346685"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4701477,
+          17.3923995
+        ]
+      },
+      "id": "node/11738179188"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179189",
+        "internet_access": "no",
+        "name": "Moosapet",
+        "name:fa": "موسی پیت",
+        "name:ml": "മൂസാപ്പേട്ട്",
+        "name:te": "మూసాపేట్",
+        "name:ur": "موسیٰ پیٹ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q82256850"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4260361,
+          17.4719703
+        ]
+      },
+      "id": "node/11738179189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179190",
+        "internet_access": "no",
+        "name": "Lakdi-ka-pul",
+        "name:fa": "لکدی-کا-پل",
+        "name:ml": "ലക്ഡി-കാ-പുൽ",
+        "name:te": "లక్డి-కా-పుల్",
+        "name:ur": "لکڑی کا پل",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4650247,
+          17.4039063
+        ]
+      },
+      "id": "node/11738179190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179191",
+        "internet_access": "no",
+        "name": "Khairatabad",
+        "name:fa": "خیرت آباد",
+        "name:ml": "ഖൈരതാബാദ്",
+        "name:te": "ఖైరతాబాద్",
+        "name:ur": "خیرت آباد",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4608458,
+          17.4115319
+        ]
+      },
+      "id": "node/11738179191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179193",
+        "internet_access": "no",
+        "name": "Irrum Manzil",
+        "name:fa": "ارم منزل",
+        "name:ml": "എറം മൻസിൽ",
+        "name:te": "ఇఱం మంజిల్",
+        "name:ur": "ارم منزل",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q85770033"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.456101,
+          17.4205559
+        ]
+      },
+      "id": "node/11738179193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179194",
+        "internet_access": "no",
+        "name": "Gandhi Bhavan",
+        "name:fa": "گاندی بهاوان",
+        "name:ml": "ഗാന്ധി ഭവൻ",
+        "name:te": "గాంధీ భవన్",
+        "name:ur": "گاندھی بھون",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q62860405"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4730995,
+          17.3861073
+        ]
+      },
+      "id": "node/11738179194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179195",
+        "internet_access": "no",
+        "name": "ESI Hospital",
+        "name:fa": "بیمارستان ای اس آی",
+        "name:ml": "ഇ.എസ്.ഐ ആശുപത്രി",
+        "name:te": "ఈ.ఎస్.ఐ ఆస్పత్రి",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q83008743"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4383501,
+          17.4474042
+        ]
+      },
+      "id": "node/11738179195"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179196",
+        "internet_access": "no",
+        "name": "Erragadda",
+        "name:fa": "اراگدا",
+        "name:ml": "എറഗഢ",
+        "name:te": "ఎర్రగడ్డ",
+        "name:ur": "ایرہ گڈہ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q82698806"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4334618,
+          17.4573276
+        ]
+      },
+      "id": "node/11738179196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179197",
+        "internet_access": "no",
+        "name": "Chaitanyapuri",
+        "name:fa": "چایتانیاپوری",
+        "name:ml": "ചൈതന്യപുരി",
+        "name:te": "ఛైతన్యపురి",
+        "name:ur": "چیتنیہ پوری",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q81820840"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5359409,
+          17.368286
+        ]
+      },
+      "id": "node/11738179197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179198",
+        "internet_access": "no",
+        "name": "Bharat Nagar",
+        "name:fa": "بهرت نگر",
+        "name:ml": "ഭരത് നഗർ",
+        "name:te": "భరత్ నగర్",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q82532536"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4300051,
+          17.4641604
+        ]
+      },
+      "id": "node/11738179198"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179199",
+        "internet_access": "no",
+        "name": "Balanagar",
+        "name:fa": "بالانگر",
+        "name:ml": "ബാലാനഗർ",
+        "name:te": "బాలానగర్",
+        "name:ur": "بالا نگر",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q82064377"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4219645,
+          17.4768224
+        ]
+      },
+      "id": "node/11738179199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738179200",
+        "internet_access": "no",
+        "name": "Assembly",
+        "name:fa": "اسمبلی",
+        "name:ml": "അസംബ്ലി",
+        "name:te": "అసెంబ్లీ",
+        "name:ur": "اسمبلی",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes",
+        "wikidata": "Q83718950"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4708176,
+          17.3981092
+        ]
+      },
+      "id": "node/11738179200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11738663633",
+        "internet_access": "no",
+        "name": "Panjagutta",
+        "name:fa": "پنجاگوتا",
+        "name:ml": "പഞ്ചഗുട്ട",
+        "name:te": "పంజాగుట్ట",
+        "name:ur": "پنجہ گٹہ",
+        "network": "Hyderabad Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/11/08)",
+        "operator": "Hyderabad Metro Rail Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "website": "https://hmrl.co.in",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4511322,
+          17.4286312
+        ]
+      },
+      "id": "node/11738663633"
+    }
+  ]
+}

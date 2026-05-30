@@ -1,0 +1,1172 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-05-30T04:20:45Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/324863029",
+        "amenity": "police",
+        "name": "Osmania University Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5259566,
+          17.4215275
+        ]
+      },
+      "id": "node/324863029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/349257371",
+        "amenity": "police",
+        "name": "Madhapur Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3960744,
+          17.4398726
+        ]
+      },
+      "id": "node/349257371"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/355647260",
+        "amenity": "police",
+        "name": "SR Nagar Police Station",
+        "name:te": "సంజీవరెడ్డి నగర్ పోలీస్ స్టేషన్"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4478427,
+          17.4414291
+        ]
+      },
+      "id": "node/355647260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/626897029",
+        "addr:city": "Hyderabad",
+        "addr:district": "Hyderabad",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:phone": "91 40 2785 4760; 91 40 2452 8888",
+        "name": "Deputy Commissioner of Police Office (South Zone)",
+        "name:ur": "پولیس ڈپٹی کمشنر آفس",
+        "operator": "Hyderbad City Police",
+        "website": "https://www.hyderabadpolice.gov.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.479458,
+          17.3671554
+        ]
+      },
+      "id": "node/626897029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/626897218",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4999031,
+          17.3655267
+        ]
+      },
+      "id": "node/626897218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/626897291",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4820816,
+          17.3714465
+        ]
+      },
+      "id": "node/626897291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/634123609",
+        "addr:street": "Adikmet Road, Vidyanagar.",
+        "amenity": "police",
+        "name": "Nallakunta Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5133112,
+          17.4076968
+        ]
+      },
+      "id": "node/634123609"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/703543252",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5493729,
+          17.4265322
+        ]
+      },
+      "id": "node/703543252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/726162714",
+        "amenity": "police",
+        "name": "Saifabad Police Station",
+        "name:te": "సైఫాబాద్ పోలీస్ స్టేషన్"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4646076,
+          17.4110866
+        ]
+      },
+      "id": "node/726162714"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/889682550",
+        "amenity": "police",
+        "name": "Karkhana Traffic Police Station",
+        "name:te": "కార్ఖానా ట్రాఫిక్ పోలీస్ స్టేషను"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5004605,
+          17.4618242
+        ]
+      },
+      "id": "node/889682550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/902311102",
+        "amenity": "police",
+        "name": "Begumpet Traffic Police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4790905,
+          17.4436297
+        ]
+      },
+      "id": "node/902311102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/928692475",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4649177,
+          17.4223157
+        ]
+      },
+      "id": "node/928692475"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1038395539",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4839215,
+          17.4211388
+        ]
+      },
+      "id": "node/1038395539"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1038396678",
+        "amenity": "police",
+        "name": "Ramgopalpet Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4884749,
+          17.4361643
+        ]
+      },
+      "id": "node/1038396678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1050786517",
+        "amenity": "police",
+        "name": "Bowenpally Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.472566,
+          17.4648512
+        ]
+      },
+      "id": "node/1050786517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1152769900",
+        "amenity": "police",
+        "name": "Amberpet Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5182437,
+          17.389303
+        ]
+      },
+      "id": "node/1152769900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1435322443",
+        "amenity": "police",
+        "name": "Malkajgiri Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5374144,
+          17.4498705
+        ]
+      },
+      "id": "node/1435322443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1447172305",
+        "amenity": "police",
+        "name": "ABIDS Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4852099,
+          17.3946616
+        ]
+      },
+      "id": "node/1447172305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2052604524",
+        "amenity": "police",
+        "name": "Nampally Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.460378,
+          17.4000892
+        ]
+      },
+      "id": "node/2052604524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2174747678",
+        "amenity": "police",
+        "name": "Humayun Nagar Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4422291,
+          17.39555
+        ]
+      },
+      "id": "node/2174747678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2181370022",
+        "addr:city": "Hyderabad",
+        "addr:district": "Hyderabad",
+        "addr:postcode": "500 024",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:phone": "91 40 27854782",
+        "government": "public_service",
+        "name": "Chaderghat Police Station",
+        "name:ur": "چادرگھاٹ تھانہ",
+        "office": "government",
+        "opening_hours": "24/7",
+        "operator": "Hyderbad City Police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4917299,
+          17.3779381
+        ]
+      },
+      "id": "node/2181370022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2285774769",
+        "addr:city": "Hyderabad",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:fax": "27853851",
+        "contact:phone": "91 40 2785 3987; 91 40 2720 4224",
+        "name": "Uppal Police Station",
+        "name:ur": "اپل تھانہ",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5602268,
+          17.4022035
+        ]
+      },
+      "id": "node/2285774769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2412755781",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5365773,
+          17.3686441
+        ]
+      },
+      "id": "node/2412755781"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2429894183",
+        "addr:city": "Hyderabad",
+        "addr:district": "Ranga Reddy",
+        "addr:postcode": "500 074",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:fax": "27853997",
+        "contact:phone": "91 40 2785 3997",
+        "government": "public_service",
+        "name": "LB Nagar Police Station",
+        "office": "government",
+        "opening_hours": "24/7",
+        "website": "http://rachakondapolice.telangana.gov.in/know-your-police-station/lb-nagar-ps.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5515732,
+          17.3467781
+        ]
+      },
+      "id": "node/2429894183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2430227021",
+        "amenity": "police",
+        "name": "Saroornagar Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5276599,
+          17.3683187
+        ]
+      },
+      "id": "node/2430227021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2710723055",
+        "amenity": "police",
+        "name": "vanasthalipuram police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5690104,
+          17.3320109
+        ]
+      },
+      "id": "node/2710723055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2713928610",
+        "amenity": "police",
+        "name": "Madhapur Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3958896,
+          17.4393976
+        ]
+      },
+      "id": "node/2713928610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3201281726",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46836,
+          17.3349988
+        ]
+      },
+      "id": "node/3201281726"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3506878895",
+        "amenity": "police",
+        "name": "Tukaram Gate Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5174812,
+          17.4451064
+        ]
+      },
+      "id": "node/3506878895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4187308295",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4689352,
+          17.3923657
+        ]
+      },
+      "id": "node/4187308295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4303556591",
+        "addr:city": "Secunderabad",
+        "addr:postcode": "500003",
+        "addr:street": "Subash Road",
+        "amenity": "police",
+        "name": "Mahankali Police Station",
+        "name:te": "మహాంకాంలి పోలీస్ స్టేషన్"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4909597,
+          17.4360262
+        ]
+      },
+      "id": "node/4303556591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4415311798",
+        "amenity": "police",
+        "name": "abids police station",
+        "name:en": "abids police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4761391,
+          17.3889804
+        ]
+      },
+      "id": "node/4415311798"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4415810190",
+        "amenity": "police",
+        "name": "Narayanaguda police station",
+        "name:en": "Narayanaguda police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4898195,
+          17.3978573
+        ]
+      },
+      "id": "node/4415810190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4436511095",
+        "amenity": "police",
+        "name": "Abids traffic police station",
+        "name:en": "Abids traffic police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4761757,
+          17.3889758
+        ]
+      },
+      "id": "node/4436511095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4614310919",
+        "amenity": "police",
+        "name": "Ramgopalpet Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4791247,
+          17.4405614
+        ]
+      },
+      "id": "node/4614310919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4796532123",
+        "amenity": "police",
+        "name": "Madannapet police station",
+        "name:en": "Madannapet police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5010532,
+          17.3586406
+        ]
+      },
+      "id": "node/4796532123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5405055071",
+        "addr:street": "Greenland Colony",
+        "amenity": "police",
+        "description": "Cyberabad police commissionerate",
+        "name": "Women police station",
+        "phone": "9494731100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3630264,
+          17.4382434
+        ]
+      },
+      "id": "node/5405055071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5405055430",
+        "amenity": "police",
+        "name": "Gachibowli traffic police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3519936,
+          17.4458549
+        ]
+      },
+      "id": "node/5405055430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6222432287",
+        "amenity": "police",
+        "name": "Asif Nagar Traffic Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4581018,
+          17.3989925
+        ]
+      },
+      "id": "node/6222432287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6308345583",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6027803,
+          17.3276128
+        ]
+      },
+      "id": "node/6308345583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6652622185",
+        "addr:city": "Hyderabad",
+        "addr:street": "Sayeedabad Main Road",
+        "amenity": "police",
+        "contact:phone": "040-27854713; 9490616380",
+        "government": "public_service",
+        "name:en": "Sayeedabad Assistant Commissioner's Police Office",
+        "office": "government",
+        "operator": "Hyderabad City Police",
+        "website": "https://hyderabadpolice.gov.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5040109,
+          17.3628131
+        ]
+      },
+      "id": "node/6652622185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6765562764",
+        "amenity": "police",
+        "name": "Chilkalguda Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.513215,
+          17.4303106
+        ]
+      },
+      "id": "node/6765562764"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6822126543",
+        "amenity": "police",
+        "contact:phone": "91 40 2785 3776; 91 9490616084",
+        "government": "public_service",
+        "name": "Kachiguda Traffic Police Station",
+        "office": "government",
+        "operator": "Hyderbad City Police",
+        "source": "survey",
+        "website": "https://www.htp.gov.in/TrafficKachiguda/index.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.493562,
+          17.382365
+        ]
+      },
+      "id": "node/6822126543"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7117645185",
+        "amenity": "police",
+        "name": "Jeedimetla Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.448492,
+          17.50919
+        ]
+      },
+      "id": "node/7117645185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7244140125",
+        "addr:city": "patancheru",
+        "addr:postcode": "502319",
+        "amenity": "police",
+        "name": "DSP office"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2649702,
+          17.5296566
+        ]
+      },
+      "id": "node/7244140125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7244140126",
+        "addr:city": "patancheru",
+        "addr:postcode": "502319",
+        "amenity": "police",
+        "name": "Police Station",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.264711,
+          17.5297092
+        ]
+      },
+      "id": "node/7244140126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7244280429",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.364221,
+          17.4628678
+        ]
+      },
+      "id": "node/7244280429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7623339921",
+        "addr:city": "Hyderabad",
+        "addr:district": "Hyderabad",
+        "addr:housenumber": "9GC6+6Q Malakpet, Hyderabad, Telangana",
+        "addr:state": "Telangana",
+        "addr:street": "Government Quarters, TV Tower, NH 9 Adjacent to, Malakpet, Hyderabad, Telangana 500036",
+        "amenity": "police",
+        "government": "public_service",
+        "name": "Malakpet Police Station",
+        "name:ur": "مالکیپٹ پولیس اسٹیشن",
+        "office": "government",
+        "opening_hours": "24/7",
+        "operator": "Hyderbad City Police",
+        "phone": "91 40 2785 4765; 91 40 2785 4969; 91 40 27854713",
+        "website": "hyderabadpolice.gov.in"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5120044,
+          17.3704861
+        ]
+      },
+      "id": "node/7623339921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8065109654",
+        "addr:city": "Hyderabad",
+        "amenity": "police",
+        "contact:phone": "91 40 27854785",
+        "government": "public_service",
+        "name": "سعیدآباد تھانہ",
+        "name:en": "Sayeedabad Police Station",
+        "office": "government",
+        "opening_hours": "24/7",
+        "operator": "Hyderabad City Police",
+        "website": "https://www.hyderabadpolice.gov.in/ps/saidabadps.htm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5091658,
+          17.3620704
+        ]
+      },
+      "id": "node/8065109654"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8065642527",
+        "addr:city": "Hyderabad",
+        "addr:postcode": "500 064",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:phone": "91 40 2785 4789; 91 40 2785 4963",
+        "government": "public_service",
+        "name": "کامتی پورہ تھانہ",
+        "name:en": "Kamatipura Police Station",
+        "office": "government",
+        "opening_hours": "24/7",
+        "operator": "Hyderbad City Police",
+        "website": "https://hyderabadpolice.gov.in/ps/kamatipuraps.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4601652,
+          17.3559794
+        ]
+      },
+      "id": "node/8065642527"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8072159040",
+        "addr:city": "Hyderabad",
+        "addr:district": "Hyderabad",
+        "addr:postcode": "500 023",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:phone": "91 40 2785 4781; 91 40 2785 4978",
+        "name": "ریان بازار تھانہ",
+        "name:en": "Rein Bazaar Police Station",
+        "opening_hours": "24/7",
+        "operator": "Hyderbad City Police",
+        "website": "https://www.hyderabadpolice.gov.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4881919,
+          17.3617475
+        ]
+      },
+      "id": "node/8072159040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8072232301",
+        "addr:city": "Hyderabad",
+        "addr:district": "Hyderabad",
+        "addr:postcode": "500 002",
+        "addr:state": "Telangana",
+        "amenity": "police",
+        "contact:phone": "91 40 2785 4797; 91 40 27854719",
+        "name": "میر چوک تھانہ",
+        "name:en": "Mir Chowk Police Station",
+        "opening_hours": "24/7",
+        "operator": "Hyderbad City Police",
+        "website": "https://www.hyderabadpolice.gov.in/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.480489,
+          17.3636186
+        ]
+      },
+      "id": "node/8072232301"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8110746355",
+        "addr:city": "Hyderabad",
+        "addr:housenumber": "Mangalhat Road",
+        "addr:postcode": "500006",
+        "addr:street": "Dhoolpet Road",
+        "amenity": "police",
+        "name": "Mangalhat Police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4607424,
+          17.3784078
+        ]
+      },
+      "id": "node/8110746355"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8386245837",
+        "amenity": "police",
+        "name": "Dcp Office East Zone Amberpet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5169585,
+          17.3863315
+        ]
+      },
+      "id": "node/8386245837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8386261012",
+        "amenity": "police",
+        "name": "Police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4346788,
+          17.534999
+        ]
+      },
+      "id": "node/8386261012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8386557382",
+        "amenity": "police",
+        "name": "Miyapur Traffic Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3615646,
+          17.4964332
+        ]
+      },
+      "id": "node/8386557382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8465529663",
+        "amenity": "police",
+        "name": "Alwal Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.511667,
+          17.5040404
+        ]
+      },
+      "id": "node/8465529663"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8739653947",
+        "amenity": "police",
+        "name": "Karkhana Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5000445,
+          17.458988
+        ]
+      },
+      "id": "node/8739653947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9355590862",
+        "amenity": "police"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5114764,
+          17.4802402
+        ]
+      },
+      "id": "node/9355590862"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9887230592",
+        "amenity": "police",
+        "name": "Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4151719,
+          17.4815966
+        ]
+      },
+      "id": "node/9887230592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10279507198",
+        "amenity": "police",
+        "name": "Kushaiguda Police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5708481,
+          17.4727515
+        ]
+      },
+      "id": "node/10279507198"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11084918152",
+        "amenity": "police",
+        "name": "Old Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4140305,
+          17.4533331
+        ]
+      },
+      "id": "node/11084918152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13308035368",
+        "amenity": "police",
+        "name": "Madhapur traffic police booth Cyberabad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3808903,
+          17.4513495
+        ]
+      },
+      "id": "node/13308035368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13436981509",
+        "amenity": "police",
+        "name": "Jagadgirigutta Police Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4227008,
+          17.506386
+        ]
+      },
+      "id": "node/13436981509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13437156185",
+        "amenity": "police",
+        "name": "traffic police station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4185614,
+          17.4801354
+        ]
+      },
+      "id": "node/13437156185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13535866501",
+        "amenity": "police",
+        "check_date": "2026-02-09",
+        "name": "Traffic Police Station Charminar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4752661,
+          17.3618349
+        ]
+      },
+      "id": "node/13535866501"
+    }
+  ]
+}
