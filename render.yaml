@@ -1,0 +1,33 @@
+services:
+  # 1. FastAPI Python Spatial Backend (Docker Service)
+  - type: web
+    name: safepath-backend
+    env: docker
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    rootDirectory: backend
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: ORS_API_KEY
+        value: "YOUR_ORS_API_KEY"
+
+  # 2. Vite React Frontend (Static Site Service)
+  - type: web
+    name: safepath-frontend
+    env: static
+    rootDirectory: frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    plan: free
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: safepath-backend
+          property: host
