@@ -52,8 +52,46 @@ class RouteRequest(BaseModel):
 
 ORS_API_KEY = os.getenv("ORS_API_KEY")
 
-# In-memory geocoding cache to prevent heavy rate limits
+import json
+
+# In-memory and persistent geocoding and routing caches to ensure absolute determinism across runs
+CACHE_DIR = DATA_DIR
+GEOCODE_CACHE_FILE = os.path.join(CACHE_DIR, "geocode_cache.json")
+ROUTE_CACHE_FILE = os.path.join(CACHE_DIR, "route_cache.json")
+
 GEOCODE_CACHE = {}
+ROUTE_CACHE = {}
+
+if os.path.exists(GEOCODE_CACHE_FILE):
+    try:
+        with open(GEOCODE_CACHE_FILE, "r") as f:
+            GEOCODE_CACHE = json.load(f)
+        print(f"Loaded {len(GEOCODE_CACHE)} geocoding cache entries from disk.")
+    except Exception as e:
+        print(f"Failed to load geocode cache: {e}")
+
+if os.path.exists(ROUTE_CACHE_FILE):
+    try:
+        with open(ROUTE_CACHE_FILE, "r") as f:
+            ROUTE_CACHE = json.load(f)
+        print(f"Loaded {len(ROUTE_CACHE)} route cache entries from disk.")
+    except Exception as e:
+        print(f"Failed to load route cache: {e}")
+
+def save_geocode_cache():
+    try:
+        with open(GEOCODE_CACHE_FILE, "w") as f:
+            json.dump(GEOCODE_CACHE, f, indent=4)
+    except Exception as e:
+        print(f"Failed to save geocode cache: {e}")
+
+def save_route_cache():
+    try:
+        with open(ROUTE_CACHE_FILE, "w") as f:
+            json.dump(ROUTE_CACHE, f, indent=4)
+    except Exception as e:
+        print(f"Failed to save route cache: {e}")
+
 
 # Robust local fallback coordinates for Hyderabad's famous neighborhoods
 HYDERABAD_NEIGHBORHOODS = [
@@ -214,7 +252,27 @@ def geocode_recursive(clean_query: str, prefix: str):
         if building_results:
             results = building_results
             
-    # 3. Try Nominatim Geocoding
+    # 3. Check local neighborhood registry BEFORE Nominatim for absolute stability!
+    if not results and clean_q_alnum:
+        neighborhood_results = []
+        for item in HYDERABAD_NEIGHBORHOODS:
+            clean_name = "".join(c for c in item["name"].lower() if c.isalnum())
+            clean_disp = "".join(c for c in item["display_name"].lower() if c.isalnum())
+            
+            # Exact or highly prominent match
+            if clean_q_alnum == clean_name or clean_name == clean_q_alnum:
+                neighborhood_results.append({
+                    "place_id": f"fallback_{clean_name}",
+                    "display_name": item["display_name"],
+                    "lat": str(item["lat"]),
+                    "lon": str(item["lon"])
+                })
+                if len(neighborhood_results) >= 5:
+                    break
+        if neighborhood_results:
+            results = neighborhood_results
+
+    # 4. Try Nominatim Geocoding ONLY as a fallback
     if not results:
         try:
             url = "https://nominatim.openstreetmap.org/search"
@@ -232,6 +290,7 @@ def geocode_recursive(clean_query: str, prefix: str):
                 data = res.json()
                 if data:
                     GEOCODE_CACHE[query_lower] = data
+                    save_geocode_cache()
                     results = data
         except Exception as e:
             print(f"Nominatim error: {e}")
@@ -314,6 +373,12 @@ def geocode(q: str):
 
 @app.post("/api/routes")
 def get_safest_routes(req: RouteRequest):
+    # Cache key based on source and dest coordinates rounded to 5 decimals (approx 1 meter precision)
+    cache_key = f"{req.source_lat:.5f},{req.source_lon:.5f}->{req.dest_lat:.5f},{req.dest_lon:.5f}"
+    if cache_key in ROUTE_CACHE:
+        print("Returning cached route results from disk...")
+        return ROUTE_CACHE[cache_key]
+
     routes_data = None
     routing_source = "OpenRouteService"
     
@@ -553,7 +618,10 @@ def get_safest_routes(req: RouteRequest):
         else:
             r["recommendation_type"] = "ALTERNATIVE"
             
-    return {
+    result_payload = {
         "routes": routes_result,
         "routing_source": routing_source
     }
+    ROUTE_CACHE[cache_key] = result_payload
+    save_route_cache()
+    return result_payload

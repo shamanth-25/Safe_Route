@@ -39,22 +39,54 @@ saferoute/
 
 ## ⚡ Quick Start
 
-### 1️⃣ Run the Backend (FastAPI)
+### 🐳 The Easiest Way: Run via Docker (Recommended)
+SafePath Hyderabad is fully containerized! You can compile and launch the entire ecosystem (routing engine, geocoder, and interactive frontend) in seconds using one command:
+
+```bash
+# Option A: Run via our automated shell wrapper
+./run.sh --docker
+
+# Option B: Run via Docker Compose directly
+docker compose up --build
+```
+
+- **Frontend Dashboard:** [http://localhost:5173](http://localhost:5173)
+- **Backend API Documentation:** [http://localhost:8000/docs](http://localhost:8000/docs)
+
+> [!TIP]
+> Pressing `Ctrl+C` in your terminal window automatically stops and tears down the Docker containers, keeping your system perfectly clean.
+
+---
+
+### 💻 Alternative: Run Locally
+
+If you prefer to run the services directly on your host machine without Docker:
+
+```bash
+# Run both services concurrently in local mode
+./run.sh
+```
+
+Or spin them up manually in separate terminals:
+
+#### 1️⃣ Run the Backend (FastAPI)
 ```bash
 cd backend
-# Install dependencies
+# Create virtual environment & install requirements
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-# Start the Uvicorn server
+
+# Start the Uvicorn FastAPI server
 python3 -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 *Backend runs on:* `http://localhost:8000`
 
-### 2️⃣ Run the Frontend (React + Vite)
+#### 2️⃣ Run the Frontend (React + Vite)
 ```bash
 cd frontend
-# Install node packages
+# Install node packages & run dev server
 npm install
-# Start the Vite development server
 npm run dev
 ```
 *Frontend runs on:* `http://localhost:5173`

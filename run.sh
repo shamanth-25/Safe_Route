@@ -14,7 +14,26 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}🛡️  Initializing SafePath Hyderabad Navigation Dashboard...${NC}"
 
-# Handle graceful shutdown of both background servers on Ctrl+C
+# Check for Docker execution flag
+if [ "$1" == "--docker" ] || [ "$1" == "-d" ]; then
+    echo -e "${GREEN}🐳 Booting in Containerized Docker Mode...${NC}"
+    echo -e "${CYAN}🚀 Launching Docker Compose cluster...${NC}"
+    
+    # Handle clean termination of Docker containers on Ctrl+C
+    cleanup_docker() {
+        echo -e "\n${PURPLE}🛑 Stopping and cleaning up Docker containers...${NC}"
+        docker compose down
+        exit 0
+    }
+    # Capture exit signals
+    trap cleanup_docker SIGINT SIGTERM EXIT
+
+    # Start docker compose with build
+    docker compose up --build
+    exit 0
+fi
+
+# Handle graceful shutdown of both background local servers on Ctrl+C
 cleanup() {
     echo -e "\n${PURPLE}🛑 Shutting down backend and frontend services...${NC}"
     kill "$BACKEND_PID" 2>/dev/null
