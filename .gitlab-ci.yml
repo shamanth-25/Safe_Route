@@ -1,8 +1,11 @@
 stages:
   - test
   - build
+  - deploy
 
-# 1. Test Backend (FastAPI Python)
+# ==========================
+# Backend Checks (FastAPI)
+# ==========================
 backend_checks:
   stage: test
   image: python:3.11-slim
@@ -15,10 +18,11 @@ backend_checks:
     - cd backend
     - pip install --upgrade pip
     - pip install -r requirements.txt
-    # Compiles Python files to check for syntax and reference errors
     - python -m compileall .
 
-# 2. Test Frontend (Vite React)
+# ==========================
+# Frontend Checks (React/Vite)
+# ==========================
 frontend_checks:
   stage: test
   image: node:20-alpine
@@ -31,10 +35,11 @@ frontend_checks:
   script:
     - cd frontend
     - npm install
-    # Verifies the production JS bundle builds successfully without syntax or module warnings
     - npm run build
 
-# 3. Verify Backend Docker Build
+# ==========================
+# Backend Docker Build Check
+# ==========================
 build_backend_docker:
   stage: build
   image: docker:24.0.5
@@ -46,7 +51,9 @@ build_backend_docker:
   script:
     - docker build -t safepath-backend:latest backend/
 
-# 4. Verify Frontend Docker Build
+# ==========================
+# Frontend Docker Build Check
+# ==========================
 build_frontend_docker:
   stage: build
   image: docker:24.0.5
@@ -57,3 +64,23 @@ build_frontend_docker:
     DOCKER_TLS_CERTDIR: ""
   script:
     - docker build -t safepath-frontend:latest frontend/
+
+# ==========================
+# GitLab Pages Deployment
+# ==========================
+pages:
+  stage: deploy
+  image: node:20-alpine
+
+  script:
+    - cd frontend
+    - npm install
+    - npm run build
+    - mv dist ../public
+
+  artifacts:
+    paths:
+      - public
+
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
