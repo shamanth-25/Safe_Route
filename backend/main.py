@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
+import google.generativeai as genai
 import geopandas as gpd
 from shapely.geometry import LineString, shape
 import requests
@@ -637,6 +638,51 @@ class ChatRequest(BaseModel):
 @app.post("/api/chat")
 async def chat_assistant(req: ChatRequest):
     msg = req.message.lower()
+    
+    # 1. Attempt Gemini 1.5 Flash Generative LLM
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if api_key and api_key != "YOUR_GEMINI_API_KEY" and api_key != "YOUR_ORS_API_KEY":
+        try:
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel('gemini-1.5-flash')
+            
+            # Formulate RAG context with active coordinates if they exist
+            context = ""
+            if req.source_lat and req.dest_lat:
+                context = (f"\n- **Starting Location coordinates:** {req.source_lat:.5f}, {req.source_lon:.5f}"
+                           f"\n- **Destination coordinates:** {req.dest_lat:.5f}, {req.dest_lon:.5f}")
+                
+            system_prompt = (
+                "You are the SafePath Hyderabad AI Safety Assistant, an elite nighttime navigation expert. "
+                "Your mission is to analyze urban routes, streetlights, and emergency safety features, helping "
+                "users plan illuminated and secure pathways across Hyderabad.\n\n"
+                "System and GIS Database context:"
+                f"\n- **Streetlight Database:** 14,284 active streetlights indexed in Hyderabad.{context}"
+                "\n\nRules:"
+                "\n1. Highly prioritize safety, streetlight density, and proximity to police stations/24/7 pharmacies."
+                "\n2. If the user is in an emergency or feels unsafe, immediately tell them to call the national emergency number 112."
+                "\n3. Keep your answers extremely concise, structured, highly professional, and encouraging. Use markdown bullet points."
+                "\n4. Do not hallucinate data. If you don't know something about a specific route, focus on general safety and illumination tips."
+            )
+            
+            response = model.generate_content([system_prompt, req.message])
+            reply_text = response.text.strip()
+            
+            # Determine smart suggested actions based on response content
+            suggested = ["Are there police stations nearby?", "How is the streetlight density?", "Emergency contact info"]
+            if any(k in msg for k in ["police", "station", "cop"]):
+                suggested = ["What is the emergency helpline?", "How is the streetlight density?", "Locate nearest hospital"]
+            elif any(k in msg for k in ["light", "dark", "streetlight"]):
+                suggested = ["Are there police stations nearby?", "Locate nearest hospital", "Find 24/7 pharmacies"]
+                
+            return {
+                "reply": reply_text,
+                "suggested_actions": suggested
+            }
+        except Exception as e:
+            print(f"Gemini API Error, falling back to local safety matcher: {e}")
+
+    # 2. Local Fallback Semantic Engine (Deterministic Safety Expert)
     reply = ""
     suggested = []
     
@@ -685,4 +731,5 @@ async def chat_assistant(req: ChatRequest):
         "reply": reply,
         "suggested_actions": suggested
     }
+
 
