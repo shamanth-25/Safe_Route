@@ -126,7 +126,6 @@ The chatbot works **out-of-the-box** using the built-in local safety expert engi
 ## ☁️ Cloud Deployment
 
 https://safepath-frontend-1szu.onrender.com
-
 ## 🔄 CI/CD Pipeline
 
 A full **GitLab CI/CD pipeline** (`.gitlab-ci.yml`) is included with two automated stages:
