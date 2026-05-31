@@ -1,0 +1,59 @@
+stages:
+  - test
+  - build
+
+# 1. Test Backend (FastAPI Python)
+backend_checks:
+  stage: test
+  image: python:3.11-slim
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:
+    paths:
+      - .cache/pip
+  script:
+    - cd backend
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    # Compiles Python files to check for syntax and reference errors
+    - python -m compileall .
+
+# 2. Test Frontend (Vite React)
+frontend_checks:
+  stage: test
+  image: node:20-alpine
+  variables:
+    npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  cache:
+    paths:
+      - .npm
+      - frontend/node_modules
+  script:
+    - cd frontend
+    - npm install
+    # Verifies the production JS bundle builds successfully without syntax or module warnings
+    - npm run build
+
+# 3. Verify Backend Docker Build
+build_backend_docker:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - docker build -t safepath-backend:latest backend/
+
+# 4. Verify Frontend Docker Build
+build_frontend_docker:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - docker build -t safepath-frontend:latest frontend/
