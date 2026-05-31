@@ -125,13 +125,7 @@ The chatbot works **out-of-the-box** using the built-in local safety expert engi
 
 ## ☁️ Cloud Deployment
 
-SafePath Hyderabad is configured for **one-click cloud deployment** on Render:
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
-
-Live deployment: **[https://safepath-frontend-yb49.onrender.com](https://safepath-frontend-yb49.onrender.com)**
-
----
+https://safepath-frontend-1szu.onrender.com
 
 ## 🔄 CI/CD Pipeline
 
