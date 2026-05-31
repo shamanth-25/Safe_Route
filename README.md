@@ -104,24 +104,7 @@ npm install
 npm run dev
 ```
 
----
 
-## 🤖 Enabling the Gemini AI Assistant
-
-The chatbot works **out-of-the-box** using the built-in local safety expert engine. To upgrade to **Google Gemini 1.5 Flash** for full generative AI responses:
-
-1. Get a free API key at [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Add it to `backend/.env`:
-   ```env
-   GEMINI_API_KEY=your_key_here
-   ORS_API_KEY=your_openrouteservice_key_here
-   ```
-3. Restart the backend — Gemini activates automatically!
-
-> [!NOTE]
-> If `GEMINI_API_KEY` is missing or invalid, the app automatically falls back to the local expert engine — **no crashes, no errors**.
-
----
 
 ## ☁️ Cloud Deployment
 
