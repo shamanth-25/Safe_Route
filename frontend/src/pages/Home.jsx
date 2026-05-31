@@ -253,9 +253,9 @@ export default function Home() {
 
     try {
       const data = await fetchRoutes(activeSrc, activeDst);
-      const routesList = data.routes;
+      const routesList = (data && Array.isArray(data.routes)) ? data.routes : [];
       setRoutes(routesList);
-      setRoutingSource(data.routing_source);
+      setRoutingSource(data ? data.routing_source : '');
       
       if (routesList.length > 0) {
         setActiveRoute(routesList[0]);
