@@ -634,6 +634,7 @@ class ChatRequest(BaseModel):
     source_lon: Optional[float] = None
     dest_lat: Optional[float] = None
     dest_lon: Optional[float] = None
+    active_route: Optional[dict] = None
 
 @app.post("/api/chat")
 async def chat_assistant(req: ChatRequest):
@@ -646,11 +647,24 @@ async def chat_assistant(req: ChatRequest):
             genai.configure(api_key=api_key)
             model = genai.GenerativeModel('gemini-1.5-flash')
             
-            # Formulate RAG context with active coordinates if they exist
+            # Formulate RAG context with active route stats
             context = ""
             if req.source_lat and req.dest_lat:
-                context = (f"\n- **Starting Location coordinates:** {req.source_lat:.5f}, {req.source_lon:.5f}"
-                           f"\n- **Destination coordinates:** {req.dest_lat:.5f}, {req.dest_lon:.5f}")
+                context += (f"\n- **Starting Location coordinates:** {req.source_lat:.5f}, {req.source_lon:.5f}"
+                            f"\n- **Destination coordinates:** {req.dest_lat:.5f}, {req.dest_lon:.5f}")
+            if req.active_route:
+                ar = req.active_route
+                reasons_str = ", ".join(ar.get("reasons", []))
+                context += (
+                    f"\n- **Active Selected Route:** {ar.get('name', 'N/A')}"
+                    f"\n- **Route Safety Score:** {ar.get('safety_score', 0)} Rank"
+                    f"\n- **Distance:** {ar.get('distance_km', 0.0)} km"
+                    f"\n- **Illumination:** {ar.get('streetlight_count', 0)} active streetlights along this path"
+                    f"\n- **Security:** {ar.get('police_count', 0)} police stations in close buffer zone"
+                    f"\n- **Medical Support:** {ar.get('hospital_count', 0)} medical care clinics and {ar.get('pharmacy_count', 0)} 24/7 pharmacies"
+                    f"\n- **Nearest Emergency Hub:** {ar.get('nearest_emergency', 'N/A')}"
+                    f"\n- **Safety Rationale:** {reasons_str}"
+                )
                 
             system_prompt = (
                 "You are the SafePath Hyderabad AI Safety Assistant, an elite nighttime navigation expert. "
@@ -686,46 +700,55 @@ async def chat_assistant(req: ChatRequest):
     reply = ""
     suggested = []
     
+    # Read active route metrics dynamically
+    ar = req.active_route or {}
+    r_name = ar.get("name", "your selected route")
+    r_score = ar.get("safety_score", 66)
+    r_dist = ar.get("distance_km", 8.5)
+    r_lights = ar.get("streetlight_count", 32)
+    r_cops = ar.get("police_count", 2)
+    r_hospitals = ar.get("hospital_count", 11)
+    r_pharma = ar.get("pharmacy_count", 15)
+    r_emergency = ar.get("nearest_emergency", "Vikram Hospital / Police Station")
+    r_reasons = ar.get("reasons", ["No specific safety rationale computed."])
+    reasons_bullet = "\n".join([f"- {r}" for r in r_reasons])
+    
     if any(k in msg for k in ["police", "security", "station", "cop", "safety", "safe"]):
-        reply = ("🛡️ **Security Shield Insight:** SafePath Hyderabad prioritizes safety by routing you near active "
-                 "emergency facilities. The database indexes multiple security zones (like the Women Police Station "
-                 "and Gachibowli Traffic Police Station). SafePath Option C passes within 200 meters of 2 active "
-                 "police stations for continuous security coverage along the IT Corridor.")
-        suggested = ["Where is the nearest police station?", "What is the emergency helpline?", "Streetlight coverage check"]
+        reply = (f"🛡️ **Security Shield Insight:** Your selected path (**{r_name}**) prioritizes safety by routing "
+                 f"near active emergency hubs. It passes near **{r_cops} active police station(s)** "
+                 f"for continuous security coverage. The closest security/emergency point on this route is **{r_emergency}**.")
+        suggested = ["Where is the nearest police station?", "What is the emergency helpline?", "Streetlight density check"]
         
     elif any(k in msg for k in ["light", "streetlight", "dark", "illuminate", "illumination"]):
-        reply = ("💡 **Streetlight Density Analysis:** Our GIS database indexes **14,284 active streetlights** "
-                 "across Hyderabad. The safest recommended route (Option C) boasts optimal night illumination, "
-                 "routing you along major high-density streetlight thoroughfares to minimize dark segments.")
-        suggested = ["Check IT Corridor lights", "How is safety score calculated?", "List nearby police stations"]
+        reply = (f"💡 **Streetlight Density Analysis:** Our database indexes **14,284 streetlights** in Hyderabad. "
+                 f"Your active path (**{r_name}**) features **{r_lights} active high-density streetlights** "
+                 f"along its **{r_dist:.2f} km** span to ensure optimal night illumination and minimize dark segments.")
+        suggested = ["Check streetlight density", "How is safety score calculated?", "List nearby police stations"]
         
     elif any(k in msg for k in ["hospital", "medical", "pharmacy", "clinic", "doctor", "health"]):
-        reply = ("🏥 **Medical Proximity Guide:** SafePath ensures emergency medical support is highly accessible. "
-                 "Our routes analyze and rank proximity to major 24/7 care centers (like Vikram Hospital and Image Hospitals) "
-                 "and round-the-clock pharmacies to guarantee constant medical support within 100 meters.")
+        reply = (f"🏥 **Medical Proximity Guide:** Emergency medical support is highly accessible on your path. "
+                 f"It routes within 100-200 meters of **{r_hospitals} medical facilities** and "
+                 f"**{r_pharma} round-the-clock pharmacies** to guarantee constant care.")
         suggested = ["Locate nearest hospital", "Find 24/7 pharmacies", "Quick Emergency: 112 info"]
         
     elif any(k in msg for k in ["transit", "metro", "station", "bus", "train", "cab"]):
         reply = ("🚇 **Active Transit Network:** High-density transit points (like Madhapur and Gachibowli Metro Stations) "
                  "are heavily illuminated and highly secure, providing rapid emergency evacuation paths and active crowds "
                  "during late hours.")
-        suggested = ["Are metro routes safer?", "Check IT Corridor lights", "Explain safety ranks"]
+        suggested = ["Are metro routes safer?", "Explain safety ranks", "Check streetlight density"]
         
     elif any(k in msg for k in ["help", "emergency", "call", "contact", "112", "phone"]):
-        reply = ("🚨 **Emergency Protocol:** If you feel unsafe or experience an emergency, immediately dial **112** "
-                 "(National Emergency Support Number). You can also click the red **'Quick Emergency: 112'** button "
-                 "in the header panel of this dashboard to initiate an instant direct emergency call.")
+        reply = (f"🚨 **Emergency Protocol:** If you feel unsafe or experience an emergency, immediately dial **112** "
+                 f"(National Emergency Support Number). The closest emergency shield along your active route is **{r_emergency}**.")
         suggested = ["Where is the nearest police station?", "Locate nearest hospital", "Check streetlights"]
         
     else:
-        reply = ("👋 **Hello! I am your SafePath AI Safety Assistant.**\n\n"
-                 "I can help analyze nighttime street lighting, locate the nearest police stations or 24/7 pharmacies, "
-                 "and explain the safety metrics of routes across Hyderabad.\n\n"
-                 "Try asking me about:\n"
-                 "- *'Are there police stations nearby?'*\n"
-                 "- *'How is the streetlight density on the IT Corridor?'*\n"
-                 "- *'What is the emergency phone number?'*")
-        suggested = ["Is IT Corridor well lit?", "Are there police stations nearby?", "Emergency contact info"]
+        reply = (f"👋 **Hello! I am your SafePath AI Safety Assistant.**\n\n"
+                 f"I have parsed the safety parameters for your selected path (**{r_name}**, Safety Score: **{r_score} Rank**).\n\n"
+                 f"Here is its **Safety Rationale Breakdown**:\n{reasons_bullet}\n\n"
+                 f"Ask me about nighttime illumination (*'{r_lights} streetlights'*), police shields (*'{r_cops} stations'*), "
+                 f"or nearest emergency centers!")
+        suggested = ["Are there police stations nearby?", "How is the streetlight density?", "Emergency contact info"]
         
     return {
         "reply": reply,

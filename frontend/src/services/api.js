@@ -30,13 +30,25 @@ export const fetchRoutes = async (source, destination) => {
   return response.data;
 };
 
-export const sendChatMessage = async (message, source = null, destination = null) => {
+export const sendChatMessage = async (message, source = null, destination = null, activeRoute = null) => {
   const response = await axios.post(`${API_BASE}/api/chat`, {
     message,
     source_lat: source ? source.lat : null,
     source_lon: source ? source.lon : null,
     dest_lat: destination ? destination.lat : null,
-    dest_lon: destination ? destination.lon : null
+    dest_lon: destination ? destination.lon : null,
+    active_route: activeRoute ? {
+      name: activeRoute.name,
+      safety_score: activeRoute.safety_score,
+      distance_km: activeRoute.distance_km,
+      duration_min: activeRoute.duration_min,
+      streetlight_count: activeRoute.counts?.streetlights || 0,
+      police_count: activeRoute.counts?.police || 0,
+      hospital_count: activeRoute.counts?.hospitals || 0,
+      pharmacy_count: activeRoute.counts?.pharmacies || 0,
+      nearest_emergency: activeRoute.nearest_emergency ? (activeRoute.nearest_emergency.police?.name || activeRoute.nearest_emergency.hospital?.name || "Emergency Zone") : "Emergency Zone",
+      reasons: activeRoute.reasons
+    } : null
   });
   return response.data;
 };

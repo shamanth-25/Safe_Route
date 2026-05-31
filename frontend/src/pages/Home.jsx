@@ -448,7 +448,7 @@ export default function Home() {
       </main>
       
       {/* Floating AI Safety Assistant Chatbot */}
-      <SafetyChatbot source={source} destination={destination} />
+      <SafetyChatbot source={source} destination={destination} activeRoute={activeRoute} />
     </div>
   );
 }

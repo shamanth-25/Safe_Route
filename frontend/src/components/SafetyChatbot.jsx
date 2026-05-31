@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Shield } from 'lucide-react';
 import { sendChatMessage } from '../services/api';
 
-export default function SafetyChatbot({ source, destination }) {
+export default function SafetyChatbot({ source, destination, activeRoute }) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
@@ -21,6 +21,30 @@ export default function SafetyChatbot({ source, destination }) {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, loading]);
 
+  // Dynamically update chatbot initial greeting when activeRoute changes
+  useEffect(() => {
+    setMessages(prev => {
+      const updatedGreeting = {
+        id: 1,
+        sender: 'bot',
+        text: activeRoute 
+          ? `👋 **Hello! I am your SafePath AI Safety Assistant.**\n\nI have parsed the safety parameters for your selected path (**${activeRoute.name}**, Safety Score: **${activeRoute.safety_score} Rank**).\n\nHere is its **Safety Rationale Breakdown**:\n${(activeRoute.reasons || []).map(r => `- ${r}`).join('\n')}\n\nAsk me about nighttime illumination (*'${activeRoute.counts?.streetlights || 0} streetlights'*), police shields (*'${activeRoute.counts?.police || 0} stations'*), or nearest emergency centers!`
+          : "👋 **Hello! I am your SafePath AI Safety Assistant.**\n\nI can analyze streetlight illumination, find the closest police shields or 24/7 pharmacies, and recommend active transit routes. How can I help secure your journey tonight?",
+        suggested: ["Are there police stations nearby?", "How is the streetlight density?", "Emergency contact info"]
+      };
+      
+      if (prev.length === 0) {
+        return [updatedGreeting];
+      }
+      
+      if (prev[0].id === 1) {
+        return [updatedGreeting, ...prev.slice(1)];
+      }
+      
+      return prev;
+    });
+  }, [activeRoute]);
+
   const handleSendMessage = async (textToSend) => {
     const text = textToSend || inputText;
     if (!text.trim() || loading) return;
@@ -32,7 +56,7 @@ export default function SafetyChatbot({ source, destination }) {
     setLoading(true);
 
     try {
-      const response = await sendChatMessage(text, source, destination);
+      const response = await sendChatMessage(text, source, destination, activeRoute);
       const botMsg = {
         id: Date.now() + 1,
         sender: 'bot',
