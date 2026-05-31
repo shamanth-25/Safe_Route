@@ -13,7 +13,6 @@ __pycache__/
 # ⚡ Dependencies & Package Managers
 frontend/node_modules/
 node_modules/
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
