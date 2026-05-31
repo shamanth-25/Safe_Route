@@ -3,9 +3,7 @@ services:
   - type: web
     name: safepath-backend
     env: docker
-    dockerContext: .
-    dockerfilePath: Dockerfile
-    rootDirectory: backend
+    rootDir: backend
     plan: free
     envVars:
       - key: PORT
@@ -14,10 +12,9 @@ services:
         value: "YOUR_ORS_API_KEY"
 
   # 2. Vite React Frontend (Static Site Service)
-  - type: web
+  - type: static
     name: safepath-frontend
-    env: static
-    rootDirectory: frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build
     publishPath: dist
     plan: free
