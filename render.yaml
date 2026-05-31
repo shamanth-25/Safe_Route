@@ -4,7 +4,6 @@ services:
     name: safepath-backend
     env: docker
     rootDir: backend
-    plan: free
     envVars:
       - key: PORT
         value: 8000
@@ -18,7 +17,6 @@ services:
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    plan: free
     routes:
       - type: rewrite
         source: /*
