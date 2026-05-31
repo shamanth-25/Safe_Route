@@ -30,3 +30,15 @@ export const fetchRoutes = async (source, destination) => {
   return response.data;
 };
 
+export const sendChatMessage = async (message, source = null, destination = null) => {
+  const response = await axios.post(`${API_BASE}/api/chat`, {
+    message,
+    source_lat: source ? source.lat : null,
+    source_lon: source ? source.lon : null,
+    dest_lat: destination ? destination.lat : null,
+    dest_lon: destination ? destination.lon : null
+  });
+  return response.data;
+};
+
+

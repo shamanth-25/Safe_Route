@@ -13,7 +13,9 @@ import SearchBar from '../components/SearchBar';
 import MapView from '../components/MapView';
 import RouteCard from '../components/RouteCard';
 import SafetyScore from '../components/SafetyScore';
+import SafetyChatbot from '../components/SafetyChatbot';
 import { geocodeSearch, fetchRoutes } from '../services/api';
+
 
 const PRESETS = [
   {
@@ -444,6 +446,9 @@ export default function Home() {
         </section>
 
       </main>
+      
+      {/* Floating AI Safety Assistant Chatbot */}
+      <SafetyChatbot source={source} destination={destination} />
     </div>
   );
 }
