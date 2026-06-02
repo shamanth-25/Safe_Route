@@ -127,3 +127,9 @@ A full **GitLab CI/CD pipeline** (`.gitlab-ci.yml`) is included with two automat
 | [User Manual](USER_MANUAL.md) | Step-by-step guide to using every dashboard feature |
 | [AGENTS.md](AGENTS.md) | Engineering deep-dive into the geocoding & spatial hashing algorithms |
 | [Contributing Guide](CONTRIBUTING.md) | Development setup, coding standards, and PR guidelines |
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPLv3).
+
+See the LICENSE file for details.
