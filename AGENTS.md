@@ -1,57 +1,263 @@
-# 🤖 Agentic Engineering Deep-Dive (AGENTS.md)
+# AGENTS.md
 
-This document provides a technical breakdown of the advanced geocoding, peeling algorithms, and spatial offset architectures engineered within **SafePath Hyderabad**.
+# SafeRoute – AI Agent Development Guide
+
+This document provides instructions for AI coding agents (ChatGPT, Claude Code, Cursor, Copilot, OpenCode, etc.) contributing to the SafeRoute repository.
 
 ---
 
-## 🛠️ Geocoding Architecture Overview
+## Project Overview
 
-Public geocoding databases (like OpenStreetMap Nominatim) do not index local private residences, apartment numbers, or specific buildings (e.g. `"Flat 403, Sri Sai Nilayam"`). 
+SafeRoute is an AI-powered safety navigation platform designed to provide safer travel routes by combining geocoding intelligence, neighborhood awareness, and emergency support features.
 
-To deliver a premium, seamless navigation experience where users can type any customized home address and instantly get a route, SafePath Hyderabad runs a three-tiered **recursive geocoding and peeling engine** in the backend:
+### Technology Stack
 
-```mermaid
-graph TD
-    A[User Types Detailed Address] --> B{Clean Prefix Pattern?}
-    B -- Yes --> C[Extract Prefix: Flat 403 / Plot 12]
-    B -- No --> D[Prefix is Empty]
-    C --> E[Recursive Geocoder]
-    D --> E
-    E --> F{Matches Building Registry?}
-    F -- Yes --> G[Return High-Precision Building Coordinates]
-    F -- No --> H[Query Nominatim API]
-    H -- Success --> I[Cache and Return Results]
-    H -- Empty/Blocked --> J{Contains Commas?}
-    J -- Yes --> K[Peel Leftmost Segment and Recursively Geocode Remainder]
-    J -- No --> L[Fallback Substring Neighborhood Match]
-    K --> M[Apply Deterministic Spatial Hashing Offset based on Peeled String]
-    M --> N[Return Unique Coordinates]
-    L --> O[Return Neighborhood Coordinates]
+### Backend
+
+* Python
+* Flask
+* REST APIs
+
+### Frontend
+
+* React
+* JavaScript
+
+### Infrastructure
+
+* Docker
+* Docker Compose
+* Render Deployment
+* GitHub / GitLab CI
+
+---
+
+## Repository Structure
+
+```text
+backend/            Flask backend services
+frontend/           React frontend application
+tests/              Automated tests
+docs/               Architecture and technical documentation
+Dockerfile          Container definition
+docker-compose.yml  Local multi-service setup
+render.yaml         Deployment configuration
+pyproject.toml      Python project configuration
+.gitlab-ci.yml      CI/CD pipelines
+.pre-commit-config.yaml
 ```
 
 ---
 
-## 🔬 Mathematical Breakdown of Spatial Offsets
+## Development Principles
 
-When a building address is recursively resolved to its parent neighborhood, returning the identical coordinates of the neighborhood center would make different building routes appear identical. 
+AI agents must follow these principles:
 
-To solve this, SafePath Hyderabad implements a **deterministic spatial hashing offset generator**.
+* Safety-first design.
+* Preserve deterministic behavior.
+* Never bypass validation mechanisms.
+* Never commit secrets or credentials.
+* Maintain backward compatibility whenever possible.
+* Update tests when introducing functionality.
+* Update documentation when architecture changes.
 
-### The Hashing Algorithm
-For any peeled building name string (e.g. `"Devi Apartments"`), we compute a stable, non-random 32-bit hash:
+---
 
-$$\text{Hash} = \sum_{i=1}^{n} (31 \times \text{Hash} + \text{ord}(c_i)) \pmod{2^{32}}$$
+## Code Quality Requirements
 
-This hash is converted into a coordinate offset factors $(\Delta_{\text{lat}}, \Delta_{\text{lon}})$ mapped within a strict boundary range of $\pm 0.003$ degrees (approximately $\pm 300$ meters) to ensure the building remains correctly positioned within its neighborhood boundaries:
+Before proposing changes:
 
-$$\Delta_{\text{lat}} = \left(\frac{\text{Hash} \pmod{2^{16}}}{65535}\right) \times 0.006 - 0.003$$
+### Run formatting
 
-$$\Delta_{\text{lon}} = \left(\frac{(\text{Hash} \gg 16) \pmod{2^{16}}}{65535}\right) \times 0.006 - 0.003$$
+```bash
+ruff format .
+ruff check .
+```
 
-These offsets are added to the parent neighborhood center coordinates:
+### Run type checks
 
-$$\text{Lat}_{\text{final}} = \text{Lat}_{\text{neighborhood}} + \Delta_{\text{lat}}$$
+```bash
+mypy backend
+```
 
-$$\text{Lon}_{\text{final}} = \text{Lon}_{\text{neighborhood}} + \Delta_{\text{lon}}$$
+### Run tests
 
-This delivers **highly distinct starting map pins and safety routing alternatives** unique to the exact text typed by the user.
+```bash
+pytest
+```
+
+All checks must pass before committing.
+
+---
+
+## Geocoding Architecture Rules
+
+SafeRoute implements a specialized recursive geocoding engine to overcome limitations of public geocoding databases.
+
+AI agents MUST preserve this architecture.
+
+### Geocoding Resolution Order
+
+1. Clean and normalize user input.
+2. Extract prefixes such as:
+
+   * Flat numbers
+   * Apartment numbers
+   * Plot identifiers
+3. Search the internal building registry.
+4. Query public geocoding providers.
+5. Cache successful responses.
+6. Apply recursive peeling when resolution fails.
+7. Generate deterministic spatial offsets.
+8. Return stable coordinates.
+
+---
+
+## Recursive Peeling Policy
+
+When a detailed address cannot be resolved:
+
+Example:
+
+```
+Flat 403, Devi Apartments,
+Madhapur, Hyderabad
+```
+
+the system progressively removes the most specific segments until a valid parent location is found.
+
+Example progression:
+
+```
+Flat 403, Devi Apartments, Madhapur
+↓
+Devi Apartments, Madhapur
+↓
+Madhapur
+```
+
+Agents must NOT replace this mechanism with random fallback behavior.
+
+---
+
+## Deterministic Spatial Offset Policy
+
+Different residences within the same neighborhood should not collapse into identical coordinates.
+
+SafeRoute therefore generates deterministic offsets based on the peeled address text.
+
+Requirements:
+
+* Offsets must remain stable.
+* The same address must always produce the same output.
+* Different address strings should generate distinct nearby coordinates.
+* Generated coordinates must remain within neighborhood boundaries.
+
+Agents must NOT introduce randomness into this process.
+
+---
+
+## API Development Guidelines
+
+When creating new endpoints:
+
+* Validate all inputs.
+* Return proper HTTP status codes.
+* Handle exceptions gracefully.
+* Add automated tests.
+* Update API documentation.
+
+---
+
+## Frontend Guidelines
+
+When modifying React components:
+
+* Preserve accessibility.
+* Avoid unnecessary re-renders.
+* Maintain existing UI patterns.
+* Handle loading and error states.
+
+---
+
+## Security Rules
+
+Never:
+
+* Hardcode API keys.
+* Commit `.env` files.
+* Expose secrets in logs.
+* Disable security checks.
+
+Secret scanning and dependency auditing are mandatory.
+
+---
+
+## Testing Expectations
+
+New functionality should include:
+
+### Backend
+
+* Unit tests
+* Integration tests
+
+### Frontend
+
+* Component tests where applicable
+
+Coverage should not decrease.
+
+---
+
+## Deployment Rules
+
+SafeRoute supports:
+
+* Docker deployments
+* Docker Compose environments
+* Render deployments
+* CI/CD pipelines
+
+Deployment configurations must remain synchronized with application changes.
+
+---
+
+## Documentation Requirements
+
+When modifying architecture or functionality:
+
+Update relevant documentation including:
+
+* README.md
+* USER_MANUAL.md
+* CHANGELOG.md
+* docs/
+
+---
+
+## Additional Technical Documentation
+
+Detailed explanations of the recursive geocoder, peeling algorithms, and deterministic spatial offset mechanisms should be maintained under:
+
+```
+docs/geocoding-engine.md
+```
+
+This AGENTS.md intentionally focuses on operational guidance for AI agents rather than full architectural deep-dives.
+
+---
+
+## Guiding Principle
+
+When multiple implementation choices exist, prefer the option that maximizes:
+
+1. User safety
+2. Deterministic behavior
+3. Maintainability
+4. Security
+5. Developer clarity
+6. Testability
+
+```
+```
